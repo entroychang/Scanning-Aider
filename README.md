@@ -2,7 +2,7 @@
 
 ## Purpose
 * This bot is for someone who needs to remind them that the scanning mission is done. 
-* This bot only support Acunetix and Nessus. 
+* This bot only support Acunetix, Nessus and commands. 
 
 ## Requirement
 * This project is based on telegram bot, so [hire](https://docs.microsoft.com/en-us/azure/bot-service/bot-service-channel-connect-telegram?view=azure-bot-service-4.0) a bot XD. 
@@ -69,4 +69,23 @@ optional arguments:
 python3 nessus_bot.py -n_ip NESSUS_IP -n_port NESSUS_PORT
 ```
 ![](https://i.imgur.com/Pv17vkL.png)
+
+### Command
+* The bot is able to remind you that the command is finished. I write the project, since `nmap` usually take a long time to wait ... 
+#### Usage
+```
+usage: command_bot.py [-h] -c COMMAND [-r | --result | --no-result]
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -c COMMAND, --command COMMAND
+                        Command
+  -r, --result, --no-result
+                        Send result to your telegram bot
+```
+* Example:
+```
+python3 command_bot.py -c "YOUR_COMMAND" -r
+```
+![](https://i.imgur.com/WMtOQ0f.png)
 

@@ -11,7 +11,7 @@ class Nmap:
         outs, _ = subp.communicate()
         print(outs)
 
-        self.telegram_bot.sendMessage("Command Complete")
+        self.telegram_bot.sendMessage("Command Complete" + "\n" + "Command: " + cmd)
         if result:
             self.telegram_bot.sendMessage(outs)
 
