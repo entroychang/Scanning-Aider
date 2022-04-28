@@ -6,7 +6,7 @@ import telegram
 
 class TelegramBot:
     def __init__(self):
-        self.token = 'YOUR_TOKEN'
+        self.token = "YOUR_TOKEN"
         self.updater = Updater(self.token)
         self.dispatcher = self.updater.dispatcher
         self.chat_id = "YOUR_CHAT_ID"
